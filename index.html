@@ -126,6 +126,7 @@
           density = svg.append("g")
             .selectAll("path")
             .data(topojson.feature(topology, topology.objects.tracts).features)
+            .attr("transform", "translate(400, 0)")
             .enter().append("path")
               .attr("fill", function(d) { return color(d.properties.density); })
               .attr("d", path);
@@ -149,6 +150,7 @@
               .attr("fill", "none")
               .attr("stroke", "#000")
               .attr("stroke-opacity", 0.5)
+              .attr("stroke-width", 3)
               .attr("d", path);
             
            //change binding color
@@ -196,7 +198,7 @@
         });
 
         </script>
-        <p><a href = "">Github Link (clickable) </a><br/>
+        <p><a href = "https://miss-ada.github.io/nc-map/">Github Link (clickable) </a><br/>
             Ada Ma <br/>
             Instructor: Suresh Lodha <br/>
             CMPS 263: Data programming for Visualization <br>
